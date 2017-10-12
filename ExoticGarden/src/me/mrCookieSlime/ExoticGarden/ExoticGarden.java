@@ -208,47 +208,47 @@ public class ExoticGarden extends JavaPlugin {
 
 	@SuppressWarnings("deprecation")
 	private void registerDishes() {
-		new CustomFood(category_drinks, new CustomItem(new MaterialData(Material.POTION, (byte) 8203), "&a라임 스무디", new String[] {"", "§7허기를 " + "5.0" + " §7채워줍니다"}), "라임_스무디",
+		new CustomFood(category_drinks, new CustomItem(getSkull(Material.POTION, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTFkYWE5MzNmMTc5Njg4Mjk2YWViMDkwY2E5NDU1OTRlZDU4OTk0N2VhM2M3ZGJjMzJkMTNkNTM5YzkyODBhYSJ9fX0="), "&a라임 스무디", "", "§7허기를 " + "5.0" + " §7채워줍니다"), "라임_스무디",
 		new ItemStack[] {getItem("라임_주스"), getItem("아이스 큐브"), null, null, null, null, null, null, null},
 		10)
 		.register();
 		
-		new CustomJuice(category_drinks, new CustomItem(new MaterialData(Material.POTION, (byte) 8193), "&4토마토 주스", new String[] {"", "§7허기를 " + "3.0" + " §7채워줍니다"}), "토마토_주스",
+		new CustomJuice(category_drinks, new CustomItem(getSkull(Material.POTION, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGNkYzljMTlhOTgzOTk0NTljZmQyOTZlN2ExMjg4Mjk5NDI2NWMxNmFiNGNjMTRiMmI4MzIyYjIzZGYyNWEifX19"), "&4토마토 주스", "", "§7허기를 " + "3.0" + " §7채워줍니다"), "토마토_주스",
 		new ItemStack[] {getItem("토마토"), null, null, null, null, null, null, null, null},
 		6)
 		.register();
 		
-		new CustomFood(category_drinks, new CustomItem(new MaterialData(Material.POTION, (byte) 8201), "&c와인", new String[] {"", "§7허기를 " + "5.0" + " §7채워줍니다"}), "와인",
+		new CustomFood(category_drinks, new CustomItem(getSkull(Material.POTION, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDRhYTlhZWFiYWYyNTY4Yjk3YTJlOGNmYTlhNTNiYWNkNGM4ZDg5ZGFkNGJhMzg3ZjZjNGI3NjFhZTA0YTE4In19fQ=="), "&c와인", "", "§7허기를 " + "5.0" + " §7채워줍니다"), "와인",
 		new ItemStack[] {getItem("포도"), new ItemStack(Material.SUGAR), null, null, null, null, null, null, null},
 		10)
 		.register();
 		
-		new CustomFood(category_drinks, new CustomItem(new MaterialData(Material.POTION, (byte) 8227), "&e레몬 아이스 티", new String[] {"", "§7허기를 " + "6.5" + " §7채워줍니다"}), "레몬_아이스_티",
+		new CustomFood(category_drinks, new CustomItem(getSkull(Material.POTION, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjliZjg4NWY1MTM3YTliZDhjZTQzYTkxYzVkMGI1ZGU5YjMyNGEzN2YxNGUxNWVlY2IzYmJjZmIxNjJhOWViIn19fQ=="), "&e레몬 아이스 티", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "레몬_아이스_티",
 		new ItemStack[] {getItem("레몬"), getItem("아이스_큐브"), getItem("찻_잎"), null, null, null, null, null, null},
 		13)
 		.register();
 		
-		new CustomFood(category_drinks, new CustomItem(new MaterialData(Material.POTION, (byte) 8193), "&d라스베리 아이스 티", new String[] {"", "§7허기를 " + "6.5" + " §7채워줍니다"}), "라스베리_아이스_티",
+		new CustomFood(category_drinks, new CustomItem(getSkull(Material.POTION, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGNkYzljMTlhOTgzOTk0NTljZmQyOTZlN2ExMjg4Mjk5NDI2NWMxNmFiNGNjMTRiMmI4MzIyYjIzZGYyNWEifX19"), "&d라스베리 아이스 티", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "라스베리_아이스_티",
 		new ItemStack[] {getItem("라스베리"), getItem("아이스_큐브"), getItem("찻_잎"), null, null, null, null, null, null},
 		13)
 		.register();
 		
-		new CustomFood(category_drinks, new CustomItem(new MaterialData(Material.POTION, (byte) 8193), "&d복숭아 아이스 티", new String[] {"", "§7허기를 " + "6.5" + " §7채워줍니다"}), "복숭아_아이스_티",
+		new CustomFood(category_drinks, new CustomItem(getSkull(Material.POTION, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGNkYzljMTlhOTgzOTk0NTljZmQyOTZlN2ExMjg4Mjk5NDI2NWMxNmFiNGNjMTRiMmI4MzIyYjIzZGYyNWEifX19"), "&d복숭아 아이스 티", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "복숭아_아이스_티",
 		new ItemStack[] {getItem("복숭아"), getItem("아이스_큐브"), getItem("찻_잎"), null, null, null, null, null, null},
 		13)
 		.register();
 		
-		new CustomFood(category_drinks, new CustomItem(new MaterialData(Material.POTION, (byte) 8193), "&4딸기 아이스 티", new String[] {"", "§7허기를 " + "6.5" + " §7채워줍니다"}), "딸기_아이스_티",
+		new CustomFood(category_drinks, new CustomItem(getSkull(Material.POTION, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGNkYzljMTlhOTgzOTk0NTljZmQyOTZlN2ExMjg4Mjk5NDI2NWMxNmFiNGNjMTRiMmI4MzIyYjIzZGYyNWEifX19"), "&4딸기 아이스 티", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "딸기_아이스_티",
 		new ItemStack[] {getItem("딸기"), getItem("아이스_큐브"), getItem("찻_잎"), null, null, null, null, null, null},
 		13)
 		.register();
 		
-		new CustomFood(category_drinks, new CustomItem(new MaterialData(Material.POTION, (byte) 8193), "&c체리 아이스 티", new String[] {"", "§7허기를 " + "6.5" + " §7채워줍니다"}), "체리_아이스_티",
+		new CustomFood(category_drinks, new CustomItem(getSkull(Material.POTION, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGNkYzljMTlhOTgzOTk0NTljZmQyOTZlN2ExMjg4Mjk5NDI2NWMxNmFiNGNjMTRiMmI4MzIyYjIzZGYyNWEifX19"), "&c체리 아이스 티", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "체리_아이스_티",
 		new ItemStack[] {getItem("체리"), getItem("아이스_큐브"), getItem("찻_잎"), null, null, null, null, null, null},
 		13)
 		.register();
 		
-		new CustomFood(category_drinks, new CustomItem(new MaterialData(Material.POTION, (byte) 8201), "&6차옌", new String[] {"", "§7허기를 " + "7.0" + " §7채워줍니다"}), "차옌",
+		new CustomFood(category_drinks, new CustomItem(getSkull(Material.POTION, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzg3YWIyMmNiYWFhYWZjMDQwYTczOWViYWFjNWJhNWRhYjc4MzA3NWU4YzFiY2M4M2QzNTRjZDU2NmRjNzNjIn19fQ=="), "&6차옌", "", "§7허기를 " + "7.0" + " §7채워줍니다"), "차옌",
 		new ItemStack[] {getItem("찻_잎"), new ItemStack(Material.SUGAR), SlimefunItems.HEAVY_CREAM, getItem("야자_과즙"), null, null, null, null, null},
 		14)
 		.register();
@@ -262,7 +262,7 @@ public class ExoticGarden extends JavaPlugin {
 		new ItemStack[] {new ItemStack(Material.EGG), null, null, null, null, null, null, null, null})
 		.register();
 		
-		new EGPlant(Categories.MISC, new CustomItem(getSkull(new MaterialData(Material.POTION, (byte) 3), "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWI5ZTk5NjIxYjk3NzNiMjllMzc1ZTYyYzY0OTVmZjFhYzg0N2Y4NWIyOTgxNmMyZWI3N2I1ODc4NzRiYTYyIn19fQ=="), "&e겨자"), "겨자", RecipeType.GRIND_STONE, false,
+		new EGPlant(Categories.MISC, new CustomItem(getSkull(Material.POTION, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWI5ZTk5NjIxYjk3NzNiMjllMzc1ZTYyYzY0OTVmZjFhYzg0N2Y4NWIyOTgxNmMyZWI3N2I1ODc4NzRiYTYyIn19fQ=="), "&e겨자"), "겨자", RecipeType.GRIND_STONE, false,
 		new ItemStack[] {getItem("겨자_씨앗"), null, null, null, null, null, null, null, null})
 		.register();
 		
@@ -279,7 +279,7 @@ public class ExoticGarden extends JavaPlugin {
 		3)
 		.register();
 		
-		new CustomFood(category_food, new CustomItem(Material.MUSHROOM_SOUP, "&r감자 샐러드", 0, new String[] {"", "§7허기를 " + "6.0" + " §7채워줍니다"}), "감자_샐러드",
+		new CustomFood(category_food, new CustomItem(getSkull(Material.MUSHROOM_SOUP, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZlOTJlMTFhNjdiNTY5MzU0NDZhMjE0Y2FhMzcyM2QyOWU2ZGI1NmM1NWZhOGQ0MzE3OWE4YTMxNzZjNmMxIn19fQ=="), "&r감자 샐러드", "", "§7허기를 " + "6.0" + " §7채워줍니다"), "감자_샐러드",
 		new ItemStack[] {new ItemStack(Material.BAKED_POTATO), getItem("마요네즈"), new ItemStack(Material.BOWL), null, null, null, null, null, null},
 		6)
 		.register();
@@ -294,22 +294,22 @@ public class ExoticGarden extends JavaPlugin {
 		11)
 		.register();
 		
-		new CustomFood(category_food, new CustomItem(Material.MUSHROOM_SOUP, "&r계란 샐러드", 0, new String[] {"", "§7허기를 " + "6.0" + " §7채워줍니다"}), "계란_샐러드",
+		new CustomFood(category_food, new CustomItem(getSkull(Material.MUSHROOM_SOUP, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZlOTJlMTFhNjdiNTY5MzU0NDZhMjE0Y2FhMzcyM2QyOWU2ZGI1NmM1NWZhOGQ0MzE3OWE4YTMxNzZjNmMxIn19fQ=="), "&r계란 샐러드", "", "§7허기를 " + "6.0" + " §7채워줍니다"), "계란_샐러드",
 		new ItemStack[] {new ItemStack(Material.EGG), getItem("마요네즈"), new ItemStack(Material.BOWL), null, null, null, null, null, null},
 		6)
 		.register();
 		
-		new CustomFood(category_food, new CustomItem(Material.MUSHROOM_SOUP, "&4토마토 수프", 0, new String[] {"", "§7허기를 " + "5.5" + " §7채워줍니다"}), "토마토_수프",
+		new CustomFood(category_food, new CustomItem(getSkull(Material.MUSHROOM_SOUP, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTNhZWU2ZTlhYzVlNzEwYzk4OWYyN2MzY2MwNDA2Njk2OTIxNDI1MTUxNzZmZTRiZDZiYTllN2I5YmU3MzMwIn19fQ=="), "&4토마토 수프", "", "§7허기를 " + "5.5" + " §7채워줍니다"), "토마토_수프",
 		new ItemStack[] {new ItemStack(Material.BOWL), getItem("토마토"), null, null, null, null, null, null, null},
 		5)
 		.register();
 		
-		new CustomFood(category_food, new CustomItem(Material.MUSHROOM_SOUP, "&c딸기 샐러드", 0, new String[] {"", "§7허기를 " + "5.0" + " §7채워줍니다"}), "딸기_샐러드",
+		new CustomFood(category_food, new CustomItem(getSkull(Material.MUSHROOM_SOUP, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZlOTJlMTFhNjdiNTY5MzU0NDZhMjE0Y2FhMzcyM2QyOWU2ZGI1NmM1NWZhOGQ0MzE3OWE4YTMxNzZjNmMxIn19fQ=="), "&c딸기 샐러드", "", "§7허기를 " + "5.0" + " §7채워줍니다"), "딸기_샐러드",
 		new ItemStack[] {new ItemStack(Material.BOWL), getItem("딸기"), null, null, null, null, null, null, null},
 		4)
 		.register();
 		
-		new CustomFood(category_food, new CustomItem(Material.MUSHROOM_SOUP, "&c포도 샐러드", 0, new String[] {"", "§7허기를 " + "5.0" + " §7채워줍니다"}), "포도_샐러드",
+		new CustomFood(category_food, new CustomItem(getSkull(Material.MUSHROOM_SOUP, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZlOTJlMTFhNjdiNTY5MzU0NDZhMjE0Y2FhMzcyM2QyOWU2ZGI1NmM1NWZhOGQ0MzE3OWE4YTMxNzZjNmMxIn19fQ=="), "&c포도 샐러드", "", "§7허기를 " + "5.0" + " §7채워줍니다"), "포도_샐러드",
 		new ItemStack[] {new ItemStack(Material.BOWL), getItem("포도"), null, null, null, null, null, null, null},
 		4)
 		.register();
@@ -339,7 +339,7 @@ public class ExoticGarden extends JavaPlugin {
 		18)
 		.register();
 		
-		new CustomFood(category_food, new CustomItem(Material.COOKIE, "&6비스킷", 0, new String[] {"", "§7허기를 " + "2.0" + " §7채워줍니다"}), "비스킷",
+		new CustomFood(category_food, new CustomItem(getSkull(Material.COOKIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjU5MmNmOWY0MmE1YThjOTk1OTY4NDkzZmRkMWIxMWUwYjY5YWFkNjQ3M2ZmNDUzODRhYmU1OGI3ZmM3YzcifX19"), "&6비스킷", "", "§7허기를 " + "2.0" + " §7채워줍니다"), "비스킷",
 		new ItemStack[] {SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, null, null, null, null, null, null, null}, 
 		2)
 		.register();
@@ -543,17 +543,17 @@ public class ExoticGarden extends JavaPlugin {
 		20)
 		.register();
 		
-		new CustomFood(category_drinks, new CustomItem(getSkull(new MaterialData(Material.POTION, (byte) 21), "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDhlOTRkZGQ3NjlhNWJlYTc0ODM3NmI0ZWM3MzgzZmQzNmQyNjc4OTRkN2MzYmVlMDExZThlNGY1ZmNkNyJ9fX0="), "&a홍차", "", "§7허기를 " + "3.0" + " §7채워줍니다"), "홍차",
+		new CustomFood(category_drinks, new CustomItem(getSkull(Material.POTION, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDhlOTRkZGQ3NjlhNWJlYTc0ODM3NmI0ZWM3MzgzZmQzNmQyNjc4OTRkN2MzYmVlMDExZThlNGY1ZmNkNyJ9fX0="), "&a홍차", "", "§7허기를 " + "3.0" + " §7채워줍니다"), "홍차",
 		new ItemStack[] {getItem("찻_잎"), new ItemStack(Material.SUGAR), null, null, null, null, null, null, null},
 		6)
 		.register();
 		
-		new CustomFood(category_drinks, new CustomItem(getSkull(new MaterialData(Material.POTION, (byte) 7), "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDExNTExYmRkNTViY2I4MjgwM2M4MDM5ZjFjMTU1ZmQ0MzA2MjYzNmUyM2Q0ZDQ2YzRkNzYxYzA0ZDIyYzIifX19"), "&6핫초코", "", "§7허기를 " + "4.0" + " §7채워줍니다"), "핫초코",
+		new CustomFood(category_drinks, new CustomItem(getSkull(Material.POTION, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDExNTExYmRkNTViY2I4MjgwM2M4MDM5ZjFjMTU1ZmQ0MzA2MjYzNmUyM2Q0ZDQ2YzRkNzYxYzA0ZDIyYzIifX19"), "&6핫초코", "", "§7허기를 " + "4.0" + " §7채워줍니다"), "핫초코",
 		new ItemStack[] {getItem("초콜릿_바"), SlimefunItems.HEAVY_CREAM, null, null, null, null, null, null, null},
 		8)
 		.register();
 		
-		new CustomFood(category_drinks, new CustomItem(getSkull(new MaterialData(Material.POTION, (byte) 14), "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmE4ZjFmNzBlODU4MjU2MDdkMjhlZGNlMWEyYWQ0NTA2ZTczMmI0YTUzNDVhNWVhNmU4MDdjNGIzMTNlODgifX19"), "&6피냐 콜라다", "", "§7허기를 " + "7.0" + " §7채워줍니다"), "피냐_콜라다",
+		new CustomFood(category_drinks, new CustomItem(getSkull(Material.POTION, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmE4ZjFmNzBlODU4MjU2MDdkMjhlZGNlMWEyYWQ0NTA2ZTczMmI0YTUzNDVhNWVhNmU4MDdjNGIzMTNlODgifX19"), "&6피냐 콜라다", "", "§7허기를 " + "7.0" + " §7채워줍니다"), "피냐_콜라다",
 		new ItemStack[] {getItem("파인애플"), getItem("아이스_큐브"), getItem("야자_과즙"), null, null, null, null, null, null},
 		14)
 		.register();
@@ -563,7 +563,7 @@ public class ExoticGarden extends JavaPlugin {
 		5)
 		.register();
 		
-		new CustomFood(category_drinks, new CustomItem(new MaterialData(Material.POTION, (byte) 8227), "&e레모네이드", new String[] {"", "§7허기를 " + "4.0" + " §7채워줍니다"}), "레모네이드",
+		new CustomFood(category_drinks, new CustomItem(getSkull(Material.POTION, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTBhY2RlZWQ2MDcyNWQ5NWI2OTExNDM3MmQ3MDI0ZjlkNjY4ZjlmZTc0NjkzN2UwNTkzMjhiYmZiZmY2In19fQ=="), "&e레모네이드", "", "§7허기를 " + "4.0" + " §7채워줍니다"), "레모네이드",
 		new ItemStack[] {getItem("레몬_주스"), new ItemStack(Material.SUGAR), null, null, null, null, null, null, null},
 		8)
 		.register();
@@ -612,12 +612,12 @@ public class ExoticGarden extends JavaPlugin {
 		16)
 		.register();
 		
-		new CustomJuice(category_drinks, new CustomItem(new MaterialData(Material.POTION, (byte) 8195), "§6파인애플 주스",  new String[] {"", "§7허기를 " + "3.0" + " §7채워줍니다"}), "파인애플_주스",
+		new CustomJuice(category_drinks, new CustomItem(getSkull(Material.POTION, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjliZjg4NWY1MTM3YTliZDhjZTQzYTkxYzVkMGI1ZGU5YjMyNGEzN2YxNGUxNWVlY2IzYmJjZmIxNjJhOWViIn19fQ=="), "§6파인애플 주스", "", "§7허기를 " + "3.0" + " §7채워줍니다"), "파인애플_주스",
 		new ItemStack[] {getItem("파인애플"), null, null, null, null, null, null, null, null},
 		6)
 		.register();
 		
-		new CustomFood(category_drinks, new CustomItem(new MaterialData(Material.POTION, (byte) 8195), "§6파인애플 스무디", new String[] {"", "§7허기를 " + "5.0" + " §7채워줍니다"}), "파인애플_스무디",
+		new CustomFood(category_drinks, new CustomItem(getSkull(Material.POTION, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjliZjg4NWY1MTM3YTliZDhjZTQzYTkxYzVkMGI1ZGU5YjMyNGEzN2YxNGUxNWVlY2IzYmJjZmIxNjJhOWViIn19fQ=="), "§6파인애플 스무디", "", "§7허기를 " + "5.0" + " §7채워줍니다"), "파인애플_스무디",
 		new ItemStack[] {getItem("파인애플_주스"), getItem("아이스_큐브"), null, null, null, null, null, null, null},
 		10)
 		.register();
@@ -702,17 +702,21 @@ public class ExoticGarden extends JavaPlugin {
 		}
 		
 		if (potion > 0) {
-			new CustomJuice(category_drinks, new CustomItem(new MaterialData(Material.POTION, (byte) 10), color + juice, new String[] {"", "§7허기를 " + "3.0" + " §7채워줍니다"}), juice.toUpperCase().replace(" ", "_"),
+			new CustomJuice(category_drinks, new CustomItem(getSkull(Material.POTION, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTFkYWE5MzNmMTc5Njg4Mjk2YWViMDkwY2E5NDU1OTRlZDU4OTk0N2VhM2M3ZGJjMzJkMTNkNTM5YzkyODBhYSJ9fX0="), color + juice, "", "§7허기를 " + "3.0" + " §7채워줍니다"), juice.toUpperCase().replace(" ", "_"),
 			new ItemStack[] {getItem(fruitName), null, null, null, null, null, null, null, null},
 			6)
 			.register();
 		}
 		if (pie) {
 			try {
-				new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQxOGM2YjBhMjlmYzFmZTc5MWM4OTc3NGQ4MjhmZjYzZDJhOWZhNmM4MzM3M2VmM2FhNDdiZjNlYjc5In19fQ=="), color + fruitName + " 파이", "", "§7허기를 " + "6.5" + " §7채워줍니다"), fruitName + "_파이",
+				new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQxOGM2YjBhMjlmYzFmZTc5MWM4OTc3NGQ4MjhmZjYzZDJhOWZhNmM4MzM3M2VmM2FhNDdiZjNlYjc5In19fQ=="), color + fruitName + " 파이", "", "§7허기를 " + "6.5" + " §7채워줍니다"), fruitName.toUpperCase() + "_파이",
 				new ItemStack[] {getItem(fruitName.toUpperCase()), new ItemStack(Material.EGG), new ItemStack(Material.SUGAR), new ItemStack(Material.MILK_BUCKET), SlimefunItems.WHEAT_FLOUR, null, null, null, null},
 				13)
 				.register();
+				new CustomFood(category_food, new CustomItem(getSkull(Material.BREAD, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGM4YTkzOTA5M2FiMWNkZTY2NzdmYWY3NDgxZjMxMWU1ZjE3ZjYzZDU4ODI1ZjBlMGMxNzQ2MzFmYjA0MzkifX19"), color + fruitName + " 잼 샌드위치", "", "§7허기를 " + "8.0" + " §7채워줍니다"), fruitName.toUpperCase() + "_잼_샌드위치",
+						new ItemStack[] {null, new ItemStack(Material.BREAD), null, null, getItem(fruitName.toUpperCase() + "_주스"), null, null, new ItemStack(Material.BREAD), null},
+						16)
+						.register();
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -753,12 +757,12 @@ public class ExoticGarden extends JavaPlugin {
 		new ItemStack[] {null, null, null, null, getItem(name.toUpperCase() + "_덤불"), null, null, null, null})
 		.register();
 
-		new CustomJuice(category_drinks, new CustomItem(new MaterialData(Material.POTION, (byte) 26), color + name + " 주스", new String[] {"", "§7허기를 " + "3.0" + " §7채워줍니다"}), name.toUpperCase() + "_주스",
+		new CustomJuice(category_drinks, new CustomItem(getSkull(Material.POTION, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDRhYTlhZWFiYWYyNTY4Yjk3YTJlOGNmYTlhNTNiYWNkNGM4ZDg5ZGFkNGJhMzg3ZjZjNGI3NjFhZTA0YTE4In19fQ=="), color + name + " 주스", "", "§7허기를 " + "3.0" + " §7채워줍니다"), name.toUpperCase() + "_주스",
 		new ItemStack[] {getItem(name.toUpperCase()), null, null, null, null, null, null, null, null},
 		6)
 		.register();
 		
-		new CustomFood(category_drinks, new CustomItem(new MaterialData(Material.POTION, (byte) 21), color + name + " 스무디", new String[] {"", "§7허기를 " + "5.0" + " §7채워줍니다"}), name.toUpperCase() + "_스무디",
+		new CustomFood(category_drinks, new CustomItem(getSkull(Material.POTION, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjliZjg4NWY1MTM3YTliZDhjZTQzYTkxYzVkMGI1ZGU5YjMyNGEzN2YxNGUxNWVlY2IzYmJjZmIxNjJhOWViIn19fQ=="), color + name + " 스무디", "", "§7허기를 " + "5.0" + " §7채워줍니다"), name.toUpperCase() + "_스무디",
 		new ItemStack[] {getItem(name.toUpperCase() + "_주스"), getItem("아이스_큐브"), null, null, null, null, null, null, null},
 		10)
 		.register();

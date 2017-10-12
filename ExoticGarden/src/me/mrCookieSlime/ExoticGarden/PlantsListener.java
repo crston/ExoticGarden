@@ -36,19 +36,11 @@ public class PlantsListener implements Listener {
 	Config cfg;
 	BlockFace[] bf = {BlockFace.NORTH, BlockFace.NORTH_EAST, BlockFace.EAST, BlockFace.SOUTH_EAST, BlockFace.SOUTH, BlockFace.SOUTH_WEST, BlockFace.WEST, BlockFace.NORTH_WEST};
 	
-	public PlantsListener(ExoticGarden exoticgarden) {
-		cfg = exoticgarden.cfg;
-		exoticgarden.getServer().getPluginManager().registerEvents(this, exoticgarden);
+	public PlantsListener(ExoticGarden plugin) {
+		cfg = plugin.cfg;
+		plugin.getServer().getPluginManager().registerEvents(this, plugin);
 	}
 	
-
-	public PlantsListener(English.ExoticGarden english) {
-		cfg = english.cfg;
-		english.getServer().getPluginManager().registerEvents(this, english);
-		// TODO Auto-generated constructor stub
-	}
-
-
 	@SuppressWarnings("deprecation")
 	@EventHandler
 	public void onGrow(StructureGrowEvent e) {

@@ -20,16 +20,11 @@ public class FoodListener implements Listener {
 	
 	ExoticGarden plugin;
 	
-	public FoodListener(ExoticGarden exoticgarden) {
-		this.plugin = exoticgarden;
-		exoticgarden.getServer().getPluginManager().registerEvents(this, exoticgarden);
+	public FoodListener(ExoticGarden plugin) {
+		this.plugin = plugin;
+		plugin.getServer().getPluginManager().registerEvents(this, plugin);
 	}
 	
-
-	public FoodListener(English.ExoticGarden english) {
-	}
-
-
 	@EventHandler(priority=EventPriority.HIGH)
 	public void onUse(final ItemUseEvent e) {
 		if (e.getPlayer().getFoodLevel() >= 20) return;
