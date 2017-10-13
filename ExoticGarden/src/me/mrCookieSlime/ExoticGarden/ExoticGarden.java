@@ -93,7 +93,9 @@ public class ExoticGarden extends JavaPlugin {
 			registerPlant("옥수수", "&6", Material.GOLDEN_CARROT, PlantType.DOUBLE_PLANT, new PlantData("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWJkMzgwMmU1ZmFjMDNhZmFiNzQyYjBmM2NjYTQxYmNkNDcyM2JlZTkxMWQyM2JlMjljZmZkNWI5NjVmMSJ9fX0="));
 			registerPlant("파인애플", "&6", Material.GOLDEN_CARROT, PlantType.DOUBLE_PLANT, new PlantData("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDdlZGRkODJlNTc1ZGZkNWI3NTc5ZDg5ZGNkMjM1MGM5OTFmMDQ4M2E3NjQ3Y2ZmZDNkMmM1ODdmMjEifX19"));
 			registerPlant("플라위", "&6", Material.LEAVES, PlantType.DOUBLE_PLANT, new PlantData("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTVmZGYyMmM5YmY0NGIzZWE1MzJjNGRkZTgzODk0YmI2MWExZjIwMTAxZDExNzRmOGRjYjMzOWI2ZmY0OSJ9fX0="));
-		
+			registerPlant("멜론", "&a", Material.LEAVES, PlantType.DOUBLE_PLANT, new PlantData("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTYzNmRlZTgwNmJhNDdhMmM0MGU5NWI1N2ExMmYzN2RlNmMyZTY3N2YyMTYwMTMyYTA3ZTI0ZWVmZmE2In19fQ=="));
+			registerPlant("호박", "&6", Material.LEAVES, PlantType.DOUBLE_PLANT, new PlantData("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjM5NzllOTYzOWExNGMzZDQ2Y2U0NmQ3MTRkNDIzY2IxNTkwOTE4MzlhNzYyY2Y5Mzk3MTZmMTUxMWZkMTUifX19"));
+			
 			registerTree("Apple Oak", new MaterialData(Material.APPLE), "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2JiMzExZjNiYTFjMDdjM2QxMTQ3Y2QyMTBkODFmZTExZmQ4YWU5ZTNkYjIxMmEwZmE3NDg5NDZjMzYzMyJ9fX0=", "사과", "&c", 8201, "사과 주스", true, Material.DIRT, Material.GRASS);
 			registerTree("Coconut", new MaterialData(Material.INK_SACK, (byte) 3), "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmQyN2RlZDU3Yjk0Y2Y3MTViMDQ4ZWY1MTdhYjNmODViZWY1YTdiZTY5ZjE0YjE1NzNlMTRlN2U0MmUyZTgifX19", "야자", "&6", 8194, "야자 과즙", true, Material.SAND);
 			registerTree("Cherry", new MaterialData(Material.APPLE), "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzUyMDc2NmI4N2QyNDYzYzM0MTczZmZjZDU3OGIwZTY3ZDE2M2QzN2EyZDdjMmU3NzkxNWNkOTExNDRkNDBkMSJ9fX0=", "체리", "&c", 8193, "체리 주스", true, Material.DIRT, Material.GRASS);
@@ -254,7 +256,7 @@ public class ExoticGarden extends JavaPlugin {
 		.register();
 		
 		new CustomFood(category_food, new CustomItem(getSkull(Material.BREAD, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjM0ODdkNDU3ZjkwNjJkNzg3YTNlNmNlMWM0NjY0YmY3NDAyZWM2N2RkMTExMjU2ZjE5YjM4Y2U0ZjY3MCJ9fX0="), "&r호박 빵", "", "§7허기를 " + "4.0" + " §7채워줍니다"), "호박_빵",
-		new ItemStack[] {new ItemStack(Material.PUMPKIN), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, null, null, null, null, null, null},
+		new ItemStack[] {getItem("호박"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, null, null, null, null, null, null},
 		8)
 		.register();
 		
@@ -330,7 +332,7 @@ public class ExoticGarden extends JavaPlugin {
 		.register();
 		
 		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjM2NWI2MWU3OWZjYjkxM2JjODYwZjRlYzYzNWQ0YTZhYjFiNzRiZmFiNjJmYjZlYTZkODlhMTZhYTg0MSJ9fX0="), "&6호박 치즈 케이크", "", "§7허기를 " + "8.5" + " §7채워줍니다"), "호박_치즈_케이크",
-		new ItemStack[] {getItem("치즈_케이크"), new ItemStack(Material.PUMPKIN), null, null, null, null, null, null, null},
+		new ItemStack[] {getItem("치즈_케이크"), getItem("호박"), null, null, null, null, null, null, null},
 		17)
 		.register();
 		
@@ -363,6 +365,7 @@ public class ExoticGarden extends JavaPlugin {
 		new ItemStack[] {SlimefunItems.HEAVY_CREAM, getItem("옥수수"), new ItemStack(Material.BOWL), null, null, null, null, null, null},
 		2)
 		.register();
+		
 		new CustomFood(category_food, new CustomItem(getSkull(Material.GRILLED_PORK, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTdiYTIyZDVkZjIxZTgyMWE2ZGU0YjhjOWQzNzNhM2FhMTg3ZDhhZTc0ZjI4OGE4MmQyYjYxZjI3MmU1In19fQ=="), "&r베이컨", "", "§7허기를 " + "1.5" + " §7채워줍니다"), "베이컨",
 		new ItemStack[] {new ItemStack(Material.GRILLED_PORK), null, null, null, null, null, null, null, null},
 		3)
@@ -438,7 +441,7 @@ public class ExoticGarden extends JavaPlugin {
 		18)
 		.register();
 		
-		new CustomFood(category_food, new CustomItem(getSkull(Material.BREAD, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOThjZWQ3NGEyMjAyMWE1MzVmNmJjZTIxYzhjNjMyYjI3M2RjMmQ5NTUyYjcxYTM4ZDU3MjY5YjM1MzhjZiJ9fX0="), "&r생선_타코", "", "§7허기를 " + "9.0" + " §7채워줍니다"), "생선_타코",
+		new CustomFood(category_food, new CustomItem(getSkull(Material.BREAD, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOThjZWQ3NGEyMjAyMWE1MzVmNmJjZTIxYzhjNjMyYjI3M2RjMmQ5NTUyYjcxYTM4ZDU3MjY5YjM1MzhjZiJ9fX0="), "&r생선 타코", "", "§7허기를 " + "9.0" + " §7채워줍니다"), "생선_타코",
 		new ItemStack[] {getItem("옥수수_가루"), new ItemStack(Material.COOKED_FISH), getItem("양상추"), getItem("토마토"), getItem("CHEESE"), null, null, null, null},
 		18)
 		.register();
@@ -509,7 +512,7 @@ public class ExoticGarden extends JavaPlugin {
 		.register();
 		
 		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODM3OTRjNzM2ZmM3NmU0NTcwNjgzMDMyNWI5NTk2OTQ2NmQ4NmY4ZDdiMjhmY2U4ZWRiMmM3NWUyYWIyNWMifX19"), "&r호박 머핀", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "호박_머핀",
-		new ItemStack[] {new ItemStack(Material.PUMPKIN), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, SlimefunItems.HEAVY_CREAM, new ItemStack(Material.EGG), null, null, null},
+		new ItemStack[] {getItem("호박"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, SlimefunItems.HEAVY_CREAM, new ItemStack(Material.EGG), null, null, null},
 		13)
 		.register();
 		
@@ -647,7 +650,7 @@ public class ExoticGarden extends JavaPlugin {
 		19)
 		.register();
 		
-		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQxOGM2YjBhMjlmYzFmZTc5MWM4OTc3NGQ4MjhmZjYzZDJhOWZhNmM4MzM3M2VmM2FhNDdiZjNlYjc5In19fQ=="), "&c사과 배 케이크", "", "§7허기를 " + "9.0" + " §7채워줍니다"), "사과_배_케이크",
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGVhZjZkMjY3ZTNhYjNjMGE5ZjUyNjUwM2E0MjFlNmNhMmE2M2RiZmE5YzZhZGEzYmM5ZjhhOWI1NTYzNyJ9fX0="), "&c사과 배 케이크", "", "§7허기를 " + "9.0" + " §7채워줍니다"), "사과_배_케이크",
 		new ItemStack[] {getItem("사과"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, getItem("배"), new ItemStack(Material.EGG), null, null, null},
 		18)
 		.register();
@@ -714,6 +717,671 @@ public class ExoticGarden extends JavaPlugin {
 		new CustomJuice(category_drinks, new CustomItem(getSkull(Material.POTION, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjliZjg4NWY1MTM3YTliZDhjZTQzYTkxYzVkMGI1ZGU5YjMyNGEzN2YxNGUxNWVlY2IzYmJjZmIxNjJhOWViIn19fQ=="), "§a배 스무디", "", "§7허기를 " + "5.0" + " §7채워줍니다"), "배_스무디",
 		new ItemStack[] {getItem("배"), null, null, null, null, null, null, null, null},
 		10)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.MUSHROOM_SOUP, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZlOTJlMTFhNjdiNTY5MzU0NDZhMjE0Y2FhMzcyM2QyOWU2ZGI1NmM1NWZhOGQ0MzE3OWE4YTMxNzZjNmMxIn19fQ=="), "&r블루베리 샐러드", "", "§7허기를 " + "6.0" + " §7채워줍니다"), "블루베리_샐러드",
+		new ItemStack[] {getItem("블루베리"), getItem("마요네즈"), new ItemStack(Material.BOWL), null, null, null, null, null, null},
+		6)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.MUSHROOM_SOUP, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZlOTJlMTFhNjdiNTY5MzU0NDZhMjE0Y2FhMzcyM2QyOWU2ZGI1NmM1NWZhOGQ0MzE3OWE4YTMxNzZjNmMxIn19fQ=="), "&r엘더베리 샐러드", "", "§7허기를 " + "6.0" + " §7채워줍니다"), "엘더베리_샐러드",
+		new ItemStack[] {getItem("엘더베리"), getItem("마요네즈"), new ItemStack(Material.BOWL), null, null, null, null, null, null},
+		6)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.MUSHROOM_SOUP, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZlOTJlMTFhNjdiNTY5MzU0NDZhMjE0Y2FhMzcyM2QyOWU2ZGI1NmM1NWZhOGQ0MzE3OWE4YTMxNzZjNmMxIn19fQ=="), "&r라스베리 샐러드", "", "§7허기를 " + "6.0" + " §7채워줍니다"), "라스베리_샐러드",
+		new ItemStack[] {getItem("라스베리"), getItem("마요네즈"), new ItemStack(Material.BOWL), null, null, null, null, null, null},
+		6)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.MUSHROOM_SOUP, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZlOTJlMTFhNjdiNTY5MzU0NDZhMjE0Y2FhMzcyM2QyOWU2ZGI1NmM1NWZhOGQ0MzE3OWE4YTMxNzZjNmMxIn19fQ=="), "&r블랙베리 샐러드", "", "§7허기를 " + "6.0" + " §7채워줍니다"), "블랙베리_샐러드",
+		new ItemStack[] {getItem("블랙베리"), getItem("마요네즈"), new ItemStack(Material.BOWL), null, null, null, null, null, null},
+		6)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.MUSHROOM_SOUP, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZlOTJlMTFhNjdiNTY5MzU0NDZhMjE0Y2FhMzcyM2QyOWU2ZGI1NmM1NWZhOGQ0MzE3OWE4YTMxNzZjNmMxIn19fQ=="), "&r크랜베리 샐러드", "", "§7허기를 " + "6.0" + " §7채워줍니다"), "크랜베리_샐러드",
+		new ItemStack[] {getItem("크랜베리"), getItem("마요네즈"), new ItemStack(Material.BOWL), null, null, null, null, null, null},
+		6)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.MUSHROOM_SOUP, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZlOTJlMTFhNjdiNTY5MzU0NDZhMjE0Y2FhMzcyM2QyOWU2ZGI1NmM1NWZhOGQ0MzE3OWE4YTMxNzZjNmMxIn19fQ=="), "&r월귤 샐러드", "", "§7허기를 " + "6.0" + " §7채워줍니다"), "월귤_샐러드",
+		new ItemStack[] {getItem("월귤"), getItem("마요네즈"), new ItemStack(Material.BOWL), null, null, null, null, null, null},
+		6)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.MUSHROOM_SOUP, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZlOTJlMTFhNjdiNTY5MzU0NDZhMjE0Y2FhMzcyM2QyOWU2ZGI1NmM1NWZhOGQ0MzE3OWE4YTMxNzZjNmMxIn19fQ=="), "&r토마토 샐러드", "", "§7허기를 " + "6.0" + " §7채워줍니다"), "토마토_샐러드",
+		new ItemStack[] {getItem("토마토"), getItem("마요네즈"), new ItemStack(Material.BOWL), null, null, null, null, null, null},
+		6)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.MUSHROOM_SOUP, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZlOTJlMTFhNjdiNTY5MzU0NDZhMjE0Y2FhMzcyM2QyOWU2ZGI1NmM1NWZhOGQ0MzE3OWE4YTMxNzZjNmMxIn19fQ=="), "&r고구마 샐러드", "", "§7허기를 " + "6.0" + " §7채워줍니다"), "고구마_샐러드",
+		new ItemStack[] {getItem("고구마"), getItem("마요네즈"), new ItemStack(Material.BOWL), null, null, null, null, null, null},
+		6)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.MUSHROOM_SOUP, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZlOTJlMTFhNjdiNTY5MzU0NDZhMjE0Y2FhMzcyM2QyOWU2ZGI1NmM1NWZhOGQ0MzE3OWE4YTMxNzZjNmMxIn19fQ=="), "&r옥수수 샐러드", "", "§7허기를 " + "6.0" + " §7채워줍니다"), "옥수수_샐러드",
+		new ItemStack[] {getItem("옥수수"), getItem("마요네즈"), new ItemStack(Material.BOWL), null, null, null, null, null, null},
+		6)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.MUSHROOM_SOUP, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZlOTJlMTFhNjdiNTY5MzU0NDZhMjE0Y2FhMzcyM2QyOWU2ZGI1NmM1NWZhOGQ0MzE3OWE4YTMxNzZjNmMxIn19fQ=="), "&r파인애플 샐러드", "", "§7허기를 " + "6.0" + " §7채워줍니다"), "파인애플_샐러드",
+		new ItemStack[] {getItem("파인애플"), getItem("마요네즈"), new ItemStack(Material.BOWL), null, null, null, null, null, null},
+		6)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.MUSHROOM_SOUP, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZlOTJlMTFhNjdiNTY5MzU0NDZhMjE0Y2FhMzcyM2QyOWU2ZGI1NmM1NWZhOGQ0MzE3OWE4YTMxNzZjNmMxIn19fQ=="), "&r사과 샐러드", "", "§7허기를 " + "6.0" + " §7채워줍니다"), "사과_샐러드",
+		new ItemStack[] {getItem("사과"), getItem("마요네즈"), new ItemStack(Material.BOWL), null, null, null, null, null, null},
+		6)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.MUSHROOM_SOUP, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZlOTJlMTFhNjdiNTY5MzU0NDZhMjE0Y2FhMzcyM2QyOWU2ZGI1NmM1NWZhOGQ0MzE3OWE4YTMxNzZjNmMxIn19fQ=="), "&r야자 샐러드", "", "§7허기를 " + "6.0" + " §7채워줍니다"), "야자_샐러드",
+		new ItemStack[] {getItem("야자"), getItem("마요네즈"), new ItemStack(Material.BOWL), null, null, null, null, null, null},
+		6)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.MUSHROOM_SOUP, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZlOTJlMTFhNjdiNTY5MzU0NDZhMjE0Y2FhMzcyM2QyOWU2ZGI1NmM1NWZhOGQ0MzE3OWE4YTMxNzZjNmMxIn19fQ=="), "&r체리 샐러드", "", "§7허기를 " + "6.0" + " §7채워줍니다"), "체리_샐러드",
+		new ItemStack[] {getItem("체리"), getItem("마요네즈"), new ItemStack(Material.BOWL), null, null, null, null, null, null},
+		6)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.MUSHROOM_SOUP, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZlOTJlMTFhNjdiNTY5MzU0NDZhMjE0Y2FhMzcyM2QyOWU2ZGI1NmM1NWZhOGQ0MzE3OWE4YTMxNzZjNmMxIn19fQ=="), "&r석류 샐러드", "", "§7허기를 " + "6.0" + " §7채워줍니다"), "석류_샐러드",
+		new ItemStack[] {getItem("석류"), getItem("마요네즈"), new ItemStack(Material.BOWL), null, null, null, null, null, null},
+		6)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.MUSHROOM_SOUP, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZlOTJlMTFhNjdiNTY5MzU0NDZhMjE0Y2FhMzcyM2QyOWU2ZGI1NmM1NWZhOGQ0MzE3OWE4YTMxNzZjNmMxIn19fQ=="), "&r레몬 샐러드", "", "§7허기를 " + "6.0" + " §7채워줍니다"), "레몬_샐러드",
+		new ItemStack[] {getItem("레몬"), getItem("마요네즈"), new ItemStack(Material.BOWL), null, null, null, null, null, null},
+		6)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.MUSHROOM_SOUP, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZlOTJlMTFhNjdiNTY5MzU0NDZhMjE0Y2FhMzcyM2QyOWU2ZGI1NmM1NWZhOGQ0MzE3OWE4YTMxNzZjNmMxIn19fQ=="), "&r자두 샐러드", "", "§7허기를 " + "6.0" + " §7채워줍니다"), "자두_샐러드",
+		new ItemStack[] {getItem("자두"), getItem("마요네즈"), new ItemStack(Material.BOWL), null, null, null, null, null, null},
+		6)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.MUSHROOM_SOUP, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZlOTJlMTFhNjdiNTY5MzU0NDZhMjE0Y2FhMzcyM2QyOWU2ZGI1NmM1NWZhOGQ0MzE3OWE4YTMxNzZjNmMxIn19fQ=="), "&r라임 샐러드", "", "§7허기를 " + "6.0" + " §7채워줍니다"), "라임_샐러드",
+		new ItemStack[] {getItem("라임"), getItem("마요네즈"), new ItemStack(Material.BOWL), null, null, null, null, null, null},
+		6)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.MUSHROOM_SOUP, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZlOTJlMTFhNjdiNTY5MzU0NDZhMjE0Y2FhMzcyM2QyOWU2ZGI1NmM1NWZhOGQ0MzE3OWE4YTMxNzZjNmMxIn19fQ=="), "&r오렌지 샐러드", "", "§7허기를 " + "6.0" + " §7채워줍니다"), "오렌지_샐러드",
+		new ItemStack[] {getItem("오렌지"), getItem("마요네즈"), new ItemStack(Material.BOWL), null, null, null, null, null, null},
+		6)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.MUSHROOM_SOUP, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZlOTJlMTFhNjdiNTY5MzU0NDZhMjE0Y2FhMzcyM2QyOWU2ZGI1NmM1NWZhOGQ0MzE3OWE4YTMxNzZjNmMxIn19fQ=="), "&r복숭아 샐러드", "", "§7허기를 " + "6.0" + " §7채워줍니다"), "복숭아_샐러드",
+		new ItemStack[] {getItem("복숭아"), getItem("마요네즈"), new ItemStack(Material.BOWL), null, null, null, null, null, null},
+		6)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.MUSHROOM_SOUP, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZlOTJlMTFhNjdiNTY5MzU0NDZhMjE0Y2FhMzcyM2QyOWU2ZGI1NmM1NWZhOGQ0MzE3OWE4YTMxNzZjNmMxIn19fQ=="), "&r배 샐러드", "", "§7허기를 " + "6.0" + " §7채워줍니다"), "배_샐러드",
+		new ItemStack[] {getItem("배"), getItem("마요네즈"), new ItemStack(Material.BOWL), null, null, null, null, null, null},
+		6)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.MUSHROOM_SOUP, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZlOTJlMTFhNjdiNTY5MzU0NDZhMjE0Y2FhMzcyM2QyOWU2ZGI1NmM1NWZhOGQ0MzE3OWE4YTMxNzZjNmMxIn19fQ=="), "&r멜론 샐러드", "", "§7허기를 " + "6.0" + " §7채워줍니다"), "멜론_샐러드",
+		new ItemStack[] {getItem("멜론"), getItem("마요네즈"), new ItemStack(Material.BOWL), null, null, null, null, null, null},
+		6)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjM2NWI2MWU3OWZjYjkxM2JjODYwZjRlYzYzNWQ0YTZhYjFiNzRiZmFiNjJmYjZlYTZkODlhMTZhYTg0MSJ9fX0="), "&c포도 치즈 케이크", "", "§7허기를 " + "8.5" + " §7채워줍니다"), "포도_치즈_케이크",
+		new ItemStack[] {getItem("치즈_케이크"), getItem("포도"), null, null, null, null, null, null, null},
+		17)
+		.register();
+
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjM2NWI2MWU3OWZjYjkxM2JjODYwZjRlYzYzNWQ0YTZhYjFiNzRiZmFiNjJmYjZlYTZkODlhMTZhYTg0MSJ9fX0="), "&c블루베리 치즈 케이크", "", "§7허기를 " + "8.5" + " §7채워줍니다"), "블루베리_치즈_케이크",
+		new ItemStack[] {getItem("치즈_케이크"), getItem("블루베리"), null, null, null, null, null, null, null},
+		17)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjM2NWI2MWU3OWZjYjkxM2JjODYwZjRlYzYzNWQ0YTZhYjFiNzRiZmFiNjJmYjZlYTZkODlhMTZhYTg0MSJ9fX0="), "&c엘더베리 치즈 케이크", "", "§7허기를 " + "8.5" + " §7채워줍니다"), "엘더베리_치즈_케이크",
+		new ItemStack[] {getItem("치즈_케이크"), getItem("엘더베리"), null, null, null, null, null, null, null},
+		17)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjM2NWI2MWU3OWZjYjkxM2JjODYwZjRlYzYzNWQ0YTZhYjFiNzRiZmFiNjJmYjZlYTZkODlhMTZhYTg0MSJ9fX0="), "&c라스베리 치즈 케이크", "", "§7허기를 " + "8.5" + " §7채워줍니다"), "라스베리_치즈_케이크",
+		new ItemStack[] {getItem("치즈_케이크"), getItem("라스베리"), null, null, null, null, null, null, null},
+		17)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjM2NWI2MWU3OWZjYjkxM2JjODYwZjRlYzYzNWQ0YTZhYjFiNzRiZmFiNjJmYjZlYTZkODlhMTZhYTg0MSJ9fX0="), "&c블랙베리 치즈 케이크", "", "§7허기를 " + "8.5" + " §7채워줍니다"), "블랙베리_치즈_케이크",
+		new ItemStack[] {getItem("치즈_케이크"), getItem("블랙베리"), null, null, null, null, null, null, null},
+		17)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjM2NWI2MWU3OWZjYjkxM2JjODYwZjRlYzYzNWQ0YTZhYjFiNzRiZmFiNjJmYjZlYTZkODlhMTZhYTg0MSJ9fX0="), "&c크랜베리 치즈 케이크", "", "§7허기를 " + "8.5" + " §7채워줍니다"), "크랜베리_치즈_케이크",
+		new ItemStack[] {getItem("치즈_케이크"), getItem("크랜베리"), null, null, null, null, null, null, null},
+		17)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjM2NWI2MWU3OWZjYjkxM2JjODYwZjRlYzYzNWQ0YTZhYjFiNzRiZmFiNjJmYjZlYTZkODlhMTZhYTg0MSJ9fX0="), "&c월귤 치즈 케이크", "", "§7허기를 " + "8.5" + " §7채워줍니다"), "월귤_치즈_케이크",
+		new ItemStack[] {getItem("치즈_케이크"), getItem("월귤"), null, null, null, null, null, null, null},
+		17)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjM2NWI2MWU3OWZjYjkxM2JjODYwZjRlYzYzNWQ0YTZhYjFiNzRiZmFiNjJmYjZlYTZkODlhMTZhYTg0MSJ9fX0="), "&c딸기 치즈 케이크", "", "§7허기를 " + "8.5" + " §7채워줍니다"), "딸기_치즈_케이크",
+		new ItemStack[] {getItem("치즈_케이크"), getItem("딸기"), null, null, null, null, null, null, null},
+		17)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjM2NWI2MWU3OWZjYjkxM2JjODYwZjRlYzYzNWQ0YTZhYjFiNzRiZmFiNjJmYjZlYTZkODlhMTZhYTg0MSJ9fX0="), "&c토마토 치즈 케이크", "", "§7허기를 " + "8.5" + " §7채워줍니다"), "토마토_치즈_케이크",
+		new ItemStack[] {getItem("치즈_케이크"), getItem("토마토"), null, null, null, null, null, null, null},
+		17)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjM2NWI2MWU3OWZjYjkxM2JjODYwZjRlYzYzNWQ0YTZhYjFiNzRiZmFiNjJmYjZlYTZkODlhMTZhYTg0MSJ9fX0="), "&c고구마 치즈 케이크", "", "§7허기를 " + "8.5" + " §7채워줍니다"), "고구마_치즈_케이크",
+		new ItemStack[] {getItem("치즈_케이크"), getItem("고구마"), null, null, null, null, null, null, null},
+		17)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjM2NWI2MWU3OWZjYjkxM2JjODYwZjRlYzYzNWQ0YTZhYjFiNzRiZmFiNjJmYjZlYTZkODlhMTZhYTg0MSJ9fX0="), "&c옥수수 치즈 케이크", "", "§7허기를 " + "8.5" + " §7채워줍니다"), "옥수수_치즈_케이크",
+		new ItemStack[] {getItem("치즈_케이크"), getItem("옥수수_가루"), null, null, null, null, null, null, null},
+		17)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjM2NWI2MWU3OWZjYjkxM2JjODYwZjRlYzYzNWQ0YTZhYjFiNzRiZmFiNjJmYjZlYTZkODlhMTZhYTg0MSJ9fX0="), "&c멜론 치즈 케이크", "", "§7허기를 " + "8.5" + " §7채워줍니다"), "멜론_치즈_케이크",
+		new ItemStack[] {getItem("치즈_케이크"), getItem("멜론"), null, null, null, null, null, null, null},
+		17)
+		.register();
+
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjM2NWI2MWU3OWZjYjkxM2JjODYwZjRlYzYzNWQ0YTZhYjFiNzRiZmFiNjJmYjZlYTZkODlhMTZhYTg0MSJ9fX0="), "&c파인애플 치즈 케이크", "", "§7허기를 " + "8.5" + " §7채워줍니다"), "파인애플_치즈_케이크",
+		new ItemStack[] {getItem("치즈_케이크"), getItem("파인애플"), null, null, null, null, null, null, null},
+		17)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjM2NWI2MWU3OWZjYjkxM2JjODYwZjRlYzYzNWQ0YTZhYjFiNzRiZmFiNjJmYjZlYTZkODlhMTZhYTg0MSJ9fX0="), "&c사과 치즈 케이크", "", "§7허기를 " + "8.5" + " §7채워줍니다"), "사과_치즈_케이크",
+		new ItemStack[] {getItem("치즈_케이크"), getItem("사과"), null, null, null, null, null, null, null},
+		17)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjM2NWI2MWU3OWZjYjkxM2JjODYwZjRlYzYzNWQ0YTZhYjFiNzRiZmFiNjJmYjZlYTZkODlhMTZhYTg0MSJ9fX0="), "&c야자 치즈 케이크", "", "§7허기를 " + "8.5" + " §7채워줍니다"), "야자_치즈_케이크",
+		new ItemStack[] {getItem("치즈_케이크"), getItem("야자"), null, null, null, null, null, null, null},
+		17)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjM2NWI2MWU3OWZjYjkxM2JjODYwZjRlYzYzNWQ0YTZhYjFiNzRiZmFiNjJmYjZlYTZkODlhMTZhYTg0MSJ9fX0="), "&c체리 치즈 케이크", "", "§7허기를 " + "8.5" + " §7채워줍니다"), "체리_치즈_케이크",
+		new ItemStack[] {getItem("치즈_케이크"), getItem("체리"), null, null, null, null, null, null, null},
+		17)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjM2NWI2MWU3OWZjYjkxM2JjODYwZjRlYzYzNWQ0YTZhYjFiNzRiZmFiNjJmYjZlYTZkODlhMTZhYTg0MSJ9fX0="), "&c석류 치즈 케이크", "", "§7허기를 " + "8.5" + " §7채워줍니다"), "석류_치즈_케이크",
+		new ItemStack[] {getItem("치즈_케이크"), getItem("석류"), null, null, null, null, null, null, null},
+		17)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjM2NWI2MWU3OWZjYjkxM2JjODYwZjRlYzYzNWQ0YTZhYjFiNzRiZmFiNjJmYjZlYTZkODlhMTZhYTg0MSJ9fX0="), "&c레몬 치즈 케이크", "", "§7허기를 " + "8.5" + " §7채워줍니다"), "레몬_치즈_케이크",
+		new ItemStack[] {getItem("치즈_케이크"), getItem("레몬"), null, null, null, null, null, null, null},
+		17)
+		.register();
+	
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjM2NWI2MWU3OWZjYjkxM2JjODYwZjRlYzYzNWQ0YTZhYjFiNzRiZmFiNjJmYjZlYTZkODlhMTZhYTg0MSJ9fX0="), "&c자두 치즈 케이크", "", "§7허기를 " + "8.5" + " §7채워줍니다"), "자두_치즈_케이크",
+		new ItemStack[] {getItem("치즈_케이크"), getItem("자두"), null, null, null, null, null, null, null},
+		17)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjM2NWI2MWU3OWZjYjkxM2JjODYwZjRlYzYzNWQ0YTZhYjFiNzRiZmFiNjJmYjZlYTZkODlhMTZhYTg0MSJ9fX0="), "&c자두 치즈 케이크", "", "§7허기를 " + "8.5" + " §7채워줍니다"), "자두_치즈_케이크",
+		new ItemStack[] {getItem("치즈_케이크"), getItem("라임"), null, null, null, null, null, null, null},
+		17)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjM2NWI2MWU3OWZjYjkxM2JjODYwZjRlYzYzNWQ0YTZhYjFiNzRiZmFiNjJmYjZlYTZkODlhMTZhYTg0MSJ9fX0="), "&c오렌지 치즈 케이크", "", "§7허기를 " + "8.5" + " §7채워줍니다"), "오렌지_치즈_케이크",
+		new ItemStack[] {getItem("치즈_케이크"), getItem("오렌지"), null, null, null, null, null, null, null},
+		17)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjM2NWI2MWU3OWZjYjkxM2JjODYwZjRlYzYzNWQ0YTZhYjFiNzRiZmFiNjJmYjZlYTZkODlhMTZhYTg0MSJ9fX0="), "&c복숭아 치즈 케이크", "", "§7허기를 " + "8.5" + " §7채워줍니다"), "복숭아_치즈_케이크",
+		new ItemStack[] {getItem("치즈_케이크"), getItem("복숭아"), null, null, null, null, null, null, null},
+		17)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGVhZjZkMjY3ZTNhYjNjMGE5ZjUyNjUwM2E0MjFlNmNhMmE2M2RiZmE5YzZhZGEzYmM5ZjhhOWI1NTYzNyJ9fX0="), "&r포도 배 케이크", "", "§7허기를 " + "9.5" + " §7채워줍니다"), "포도_배_케이크",
+		new ItemStack[] {getItem("포도"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, getItem("배"), new ItemStack(Material.EGG), null, null, null},
+		19)
+		.register();
+
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGVhZjZkMjY3ZTNhYjNjMGE5ZjUyNjUwM2E0MjFlNmNhMmE2M2RiZmE5YzZhZGEzYmM5ZjhhOWI1NTYzNyJ9fX0="), "&r블루베리 배 케이크", "", "§7허기를 " + "9.5" + " §7채워줍니다"), "블루베리_배_케이크",
+		new ItemStack[] {getItem("블루베리"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, getItem("배"), new ItemStack(Material.EGG), null, null, null},
+		19)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGVhZjZkMjY3ZTNhYjNjMGE5ZjUyNjUwM2E0MjFlNmNhMmE2M2RiZmE5YzZhZGEzYmM5ZjhhOWI1NTYzNyJ9fX0="), "&r엘더베리 배 케이크", "", "§7허기를 " + "9.5" + " §7채워줍니다"), "엘더베리_배_케이크",
+		new ItemStack[] {getItem("엘더베리"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, getItem("배"), new ItemStack(Material.EGG), null, null, null},
+		19)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGVhZjZkMjY3ZTNhYjNjMGE5ZjUyNjUwM2E0MjFlNmNhMmE2M2RiZmE5YzZhZGEzYmM5ZjhhOWI1NTYzNyJ9fX0="), "&r라스베리 배 케이크", "", "§7허기를 " + "9.5" + " §7채워줍니다"), "라스베리_배_케이크",
+		new ItemStack[] {getItem("라스베리"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, getItem("배"), new ItemStack(Material.EGG), null, null, null},
+		19)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGVhZjZkMjY3ZTNhYjNjMGE5ZjUyNjUwM2E0MjFlNmNhMmE2M2RiZmE5YzZhZGEzYmM5ZjhhOWI1NTYzNyJ9fX0="), "&r블랙베리 배 케이크", "", "§7허기를 " + "9.5" + " §7채워줍니다"), "블랙베리_배_케이크",
+		new ItemStack[] {getItem("블랙베리"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, getItem("배"), new ItemStack(Material.EGG), null, null, null},
+		19)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGVhZjZkMjY3ZTNhYjNjMGE5ZjUyNjUwM2E0MjFlNmNhMmE2M2RiZmE5YzZhZGEzYmM5ZjhhOWI1NTYzNyJ9fX0="), "&r크랜베리 배 케이크", "", "§7허기를 " + "9.5" + " §7채워줍니다"), "크랜베리_배_케이크",
+		new ItemStack[] {getItem("크랜베리"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, getItem("배"), new ItemStack(Material.EGG), null, null, null},
+		19)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGVhZjZkMjY3ZTNhYjNjMGE5ZjUyNjUwM2E0MjFlNmNhMmE2M2RiZmE5YzZhZGEzYmM5ZjhhOWI1NTYzNyJ9fX0="), "&r월귤 배 케이크", "", "§7허기를 " + "9.5" + " §7채워줍니다"), "월귤_배_케이크",
+		new ItemStack[] {getItem("월귤"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, getItem("배"), new ItemStack(Material.EGG), null, null, null},
+		19)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGVhZjZkMjY3ZTNhYjNjMGE5ZjUyNjUwM2E0MjFlNmNhMmE2M2RiZmE5YzZhZGEzYmM5ZjhhOWI1NTYzNyJ9fX0="), "&r딸기 배 케이크", "", "§7허기를 " + "9.5" + " §7채워줍니다"), "딸기_배_케이크",
+		new ItemStack[] {getItem("딸기"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, getItem("배"), new ItemStack(Material.EGG), null, null, null},
+		19)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGVhZjZkMjY3ZTNhYjNjMGE5ZjUyNjUwM2E0MjFlNmNhMmE2M2RiZmE5YzZhZGEzYmM5ZjhhOWI1NTYzNyJ9fX0="), "&r토마토 배 케이크", "", "§7허기를 " + "9.5" + " §7채워줍니다"), "토마토_배_케이크",
+		new ItemStack[] {getItem("토마토"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, getItem("배"), new ItemStack(Material.EGG), null, null, null},
+		19)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGVhZjZkMjY3ZTNhYjNjMGE5ZjUyNjUwM2E0MjFlNmNhMmE2M2RiZmE5YzZhZGEzYmM5ZjhhOWI1NTYzNyJ9fX0="), "&r고구마 배 케이크", "", "§7허기를 " + "9.5" + " §7채워줍니다"), "고구마_배_케이크",
+		new ItemStack[] {getItem("고구마"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, getItem("배"), new ItemStack(Material.EGG), null, null, null},
+		19)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGVhZjZkMjY3ZTNhYjNjMGE5ZjUyNjUwM2E0MjFlNmNhMmE2M2RiZmE5YzZhZGEzYmM5ZjhhOWI1NTYzNyJ9fX0="), "&r옥수수 배 케이크", "", "§7허기를 " + "9.5" + " §7채워줍니다"), "옥수수_배_케이크",
+		new ItemStack[] {getItem("옥수수_가루"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, getItem("배"), new ItemStack(Material.EGG), null, null, null},
+		19)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGVhZjZkMjY3ZTNhYjNjMGE5ZjUyNjUwM2E0MjFlNmNhMmE2M2RiZmE5YzZhZGEzYmM5ZjhhOWI1NTYzNyJ9fX0="), "&r파인애플 배 케이크", "", "§7허기를 " + "9.5" + " §7채워줍니다"), "파인애플_배_케이크",
+		new ItemStack[] {getItem("파인애플"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, getItem("배"), new ItemStack(Material.EGG), null, null, null},
+		19)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGVhZjZkMjY3ZTNhYjNjMGE5ZjUyNjUwM2E0MjFlNmNhMmE2M2RiZmE5YzZhZGEzYmM5ZjhhOWI1NTYzNyJ9fX0="), "&r야자 배 케이크", "", "§7허기를 " + "9.5" + " §7채워줍니다"), "야자_배_케이크",
+		new ItemStack[] {getItem("야자"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, getItem("배"), new ItemStack(Material.EGG), null, null, null},
+		19)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGVhZjZkMjY3ZTNhYjNjMGE5ZjUyNjUwM2E0MjFlNmNhMmE2M2RiZmE5YzZhZGEzYmM5ZjhhOWI1NTYzNyJ9fX0="), "&r체리 배 케이크", "", "§7허기를 " + "9.5" + " §7채워줍니다"), "체리_배_케이크",
+		new ItemStack[] {getItem("체리"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, getItem("배"), new ItemStack(Material.EGG), null, null, null},
+		19)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGVhZjZkMjY3ZTNhYjNjMGE5ZjUyNjUwM2E0MjFlNmNhMmE2M2RiZmE5YzZhZGEzYmM5ZjhhOWI1NTYzNyJ9fX0="), "&r석류 배 케이크", "", "§7허기를 " + "9.5" + " §7채워줍니다"), "석류_배_케이크",
+		new ItemStack[] {getItem("석류"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, getItem("배"), new ItemStack(Material.EGG), null, null, null},
+		19)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGVhZjZkMjY3ZTNhYjNjMGE5ZjUyNjUwM2E0MjFlNmNhMmE2M2RiZmE5YzZhZGEzYmM5ZjhhOWI1NTYzNyJ9fX0="), "&r레몬 배 케이크", "", "§7허기를 " + "9.5" + " §7채워줍니다"), "레몬_배_케이크",
+		new ItemStack[] {getItem("레몬"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, getItem("배"), new ItemStack(Material.EGG), null, null, null},
+		19)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGVhZjZkMjY3ZTNhYjNjMGE5ZjUyNjUwM2E0MjFlNmNhMmE2M2RiZmE5YzZhZGEzYmM5ZjhhOWI1NTYzNyJ9fX0="), "&r자두 배 케이크", "", "§7허기를 " + "9.5" + " §7채워줍니다"), "자두_배_케이크",
+		new ItemStack[] {getItem("자두"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, getItem("배"), new ItemStack(Material.EGG), null, null, null},
+		19)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGVhZjZkMjY3ZTNhYjNjMGE5ZjUyNjUwM2E0MjFlNmNhMmE2M2RiZmE5YzZhZGEzYmM5ZjhhOWI1NTYzNyJ9fX0="), "&r라임 배 케이크", "", "§7허기를 " + "9.5" + " §7채워줍니다"), "라임_배_케이크",
+		new ItemStack[] {getItem("라임"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, getItem("배"), new ItemStack(Material.EGG), null, null, null},
+		19)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGVhZjZkMjY3ZTNhYjNjMGE5ZjUyNjUwM2E0MjFlNmNhMmE2M2RiZmE5YzZhZGEzYmM5ZjhhOWI1NTYzNyJ9fX0="), "&r오렌지 배 케이크", "", "§7허기를 " + "9.5" + " §7채워줍니다"), "오렌지_배_케이크",
+		new ItemStack[] {getItem("오렌지"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, getItem("배"), new ItemStack(Material.EGG), null, null, null},
+		19)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGVhZjZkMjY3ZTNhYjNjMGE5ZjUyNjUwM2E0MjFlNmNhMmE2M2RiZmE5YzZhZGEzYmM5ZjhhOWI1NTYzNyJ9fX0="), "&r복숭아 배 케이크", "", "§7허기를 " + "9.5" + " §7채워줍니다"), "복숭아_배_케이크",
+		new ItemStack[] {getItem("복숭아"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, getItem("배"), new ItemStack(Material.EGG), null, null, null},
+		19)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGVhZjZkMjY3ZTNhYjNjMGE5ZjUyNjUwM2E0MjFlNmNhMmE2M2RiZmE5YzZhZGEzYmM5ZjhhOWI1NTYzNyJ9fX0="), "&r멜론 배 케이크", "", "§7허기를 " + "9.5" + " §7채워줍니다"), "멜론_배_케이크",
+		new ItemStack[] {getItem("멜론"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, getItem("배"), new ItemStack(Material.EGG), null, null, null},
+		19)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGVhZjZkMjY3ZTNhYjNjMGE5ZjUyNjUwM2E0MjFlNmNhMmE2M2RiZmE5YzZhZGEzYmM5ZjhhOWI1NTYzNyJ9fX0="), "&r호박 배 케이크", "", "§7허기를 " + "9.5" + " §7채워줍니다"), "호박_배_케이크",
+		new ItemStack[] {getItem("호박"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, getItem("배"), new ItemStack(Material.EGG), null, null, null},
+		19)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQ3ZjRmNWE3NGM2NjkxMjgwY2Q4MGU3MTQ4YjQ5YjJjZTE3ZGNmNjRmZDU1MzY4NjI3ZjVkOTJhOTc2YTZhOCJ9fX0="), "&r포도 팬케이크", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "포도_팬케이크",
+		new ItemStack[] {getItem("팬케이크"), getItem("포도"), null, null, null, null, null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQ3ZjRmNWE3NGM2NjkxMjgwY2Q4MGU3MTQ4YjQ5YjJjZTE3ZGNmNjRmZDU1MzY4NjI3ZjVkOTJhOTc2YTZhOCJ9fX0="), "&r엘더베리 팬케이크", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "엘더베리_팬케이크",
+		new ItemStack[] {getItem("팬케이크"), getItem("엘더베리"), null, null, null, null, null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQ3ZjRmNWE3NGM2NjkxMjgwY2Q4MGU3MTQ4YjQ5YjJjZTE3ZGNmNjRmZDU1MzY4NjI3ZjVkOTJhOTc2YTZhOCJ9fX0="), "&r라스베리 팬케이크", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "라스베리_팬케이크",
+		new ItemStack[] {getItem("팬케이크"), getItem("라스베리"), null, null, null, null, null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQ3ZjRmNWE3NGM2NjkxMjgwY2Q4MGU3MTQ4YjQ5YjJjZTE3ZGNmNjRmZDU1MzY4NjI3ZjVkOTJhOTc2YTZhOCJ9fX0="), "&r크랜베리 팬케이크", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "크랜베리_팬케이크",
+		new ItemStack[] {getItem("팬케이크"), getItem("크랜베리"), null, null, null, null, null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQ3ZjRmNWE3NGM2NjkxMjgwY2Q4MGU3MTQ4YjQ5YjJjZTE3ZGNmNjRmZDU1MzY4NjI3ZjVkOTJhOTc2YTZhOCJ9fX0="), "&r월귤 팬케이크", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "월귤_팬케이크",
+		new ItemStack[] {getItem("팬케이크"), getItem("월귤"), null, null, null, null, null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQ3ZjRmNWE3NGM2NjkxMjgwY2Q4MGU3MTQ4YjQ5YjJjZTE3ZGNmNjRmZDU1MzY4NjI3ZjVkOTJhOTc2YTZhOCJ9fX0="), "&r딸기 팬케이크", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "딸기_팬케이크",
+		new ItemStack[] {getItem("팬케이크"), getItem("딸기"), null, null, null, null, null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQ3ZjRmNWE3NGM2NjkxMjgwY2Q4MGU3MTQ4YjQ5YjJjZTE3ZGNmNjRmZDU1MzY4NjI3ZjVkOTJhOTc2YTZhOCJ9fX0="), "&r토마토 팬케이크", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "토마토_팬케이크",
+		new ItemStack[] {getItem("팬케이크"), getItem("토마토"), null, null, null, null, null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQ3ZjRmNWE3NGM2NjkxMjgwY2Q4MGU3MTQ4YjQ5YjJjZTE3ZGNmNjRmZDU1MzY4NjI3ZjVkOTJhOTc2YTZhOCJ9fX0="), "&r고구마 팬케이크", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "고구마_팬케이크",
+		new ItemStack[] {getItem("팬케이크"), getItem("고구마"), null, null, null, null, null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQ3ZjRmNWE3NGM2NjkxMjgwY2Q4MGU3MTQ4YjQ5YjJjZTE3ZGNmNjRmZDU1MzY4NjI3ZjVkOTJhOTc2YTZhOCJ9fX0="), "&r옥수수 팬케이크", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "옥수수_팬케이크",
+		new ItemStack[] {getItem("팬케이크"), getItem("옥수수_가루"), null, null, null, null, null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQ3ZjRmNWE3NGM2NjkxMjgwY2Q4MGU3MTQ4YjQ5YjJjZTE3ZGNmNjRmZDU1MzY4NjI3ZjVkOTJhOTc2YTZhOCJ9fX0="), "&r파인애플 팬케이크", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "파인애플_팬케이크",
+		new ItemStack[] {getItem("팬케이크"), getItem("파인애플"), null, null, null, null, null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQ3ZjRmNWE3NGM2NjkxMjgwY2Q4MGU3MTQ4YjQ5YjJjZTE3ZGNmNjRmZDU1MzY4NjI3ZjVkOTJhOTc2YTZhOCJ9fX0="), "&r사과 팬케이크", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "사과_팬케이크",
+		new ItemStack[] {getItem("팬케이크"), getItem("사과"), null, null, null, null, null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQ3ZjRmNWE3NGM2NjkxMjgwY2Q4MGU3MTQ4YjQ5YjJjZTE3ZGNmNjRmZDU1MzY4NjI3ZjVkOTJhOTc2YTZhOCJ9fX0="), "&r야자 팬케이크", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "야자_팬케이크",
+		new ItemStack[] {getItem("팬케이크"), getItem("야자"), null, null, null, null, null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQ3ZjRmNWE3NGM2NjkxMjgwY2Q4MGU3MTQ4YjQ5YjJjZTE3ZGNmNjRmZDU1MzY4NjI3ZjVkOTJhOTc2YTZhOCJ9fX0="), "&r체리 팬케이크", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "체리_팬케이크",
+		new ItemStack[] {getItem("팬케이크"), getItem("체리"), null, null, null, null, null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQ3ZjRmNWE3NGM2NjkxMjgwY2Q4MGU3MTQ4YjQ5YjJjZTE3ZGNmNjRmZDU1MzY4NjI3ZjVkOTJhOTc2YTZhOCJ9fX0="), "&r석류 팬케이크", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "석류_팬케이크",
+		new ItemStack[] {getItem("팬케이크"), getItem("석류"), null, null, null, null, null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQ3ZjRmNWE3NGM2NjkxMjgwY2Q4MGU3MTQ4YjQ5YjJjZTE3ZGNmNjRmZDU1MzY4NjI3ZjVkOTJhOTc2YTZhOCJ9fX0="), "&r레몬 팬케이크", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "레몬_팬케이크",
+		new ItemStack[] {getItem("팬케이크"), getItem("레몬"), null, null, null, null, null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQ3ZjRmNWE3NGM2NjkxMjgwY2Q4MGU3MTQ4YjQ5YjJjZTE3ZGNmNjRmZDU1MzY4NjI3ZjVkOTJhOTc2YTZhOCJ9fX0="), "&r자두 팬케이크", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "자두_팬케이크",
+		new ItemStack[] {getItem("팬케이크"), getItem("자두"), null, null, null, null, null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQ3ZjRmNWE3NGM2NjkxMjgwY2Q4MGU3MTQ4YjQ5YjJjZTE3ZGNmNjRmZDU1MzY4NjI3ZjVkOTJhOTc2YTZhOCJ9fX0="), "&r라임 팬케이크", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "라임_팬케이크",
+		new ItemStack[] {getItem("팬케이크"), getItem("라임"), null, null, null, null, null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQ3ZjRmNWE3NGM2NjkxMjgwY2Q4MGU3MTQ4YjQ5YjJjZTE3ZGNmNjRmZDU1MzY4NjI3ZjVkOTJhOTc2YTZhOCJ9fX0="), "&r오렌지 팬케이크", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "오렌지_팬케이크",
+		new ItemStack[] {getItem("팬케이크"), getItem("오렌지"), null, null, null, null, null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQ3ZjRmNWE3NGM2NjkxMjgwY2Q4MGU3MTQ4YjQ5YjJjZTE3ZGNmNjRmZDU1MzY4NjI3ZjVkOTJhOTc2YTZhOCJ9fX0="), "&r복숭아 팬케이크", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "복숭아_팬케이크",
+		new ItemStack[] {getItem("팬케이크"), getItem("복숭아"), null, null, null, null, null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQ3ZjRmNWE3NGM2NjkxMjgwY2Q4MGU3MTQ4YjQ5YjJjZTE3ZGNmNjRmZDU1MzY4NjI3ZjVkOTJhOTc2YTZhOCJ9fX0="), "&r배 팬케이크", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "배_팬케이크",
+		new ItemStack[] {getItem("팬케이크"), getItem("배"), null, null, null, null, null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQ3ZjRmNWE3NGM2NjkxMjgwY2Q4MGU3MTQ4YjQ5YjJjZTE3ZGNmNjRmZDU1MzY4NjI3ZjVkOTJhOTc2YTZhOCJ9fX0="), "&r멜론 팬케이크", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "멜론_팬케이크",
+		new ItemStack[] {getItem("팬케이크"), getItem("멜론"), null, null, null, null, null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQ3ZjRmNWE3NGM2NjkxMjgwY2Q4MGU3MTQ4YjQ5YjJjZTE3ZGNmNjRmZDU1MzY4NjI3ZjVkOTJhOTc2YTZhOCJ9fX0="), "&r호박 팬케이크", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "호박_팬케이크",
+		new ItemStack[] {getItem("팬케이크"), getItem("호박"), null, null, null, null, null, null, null},
+		13)
+		.register();
+		
+		new CustomJuice(category_drinks, new CustomItem(getSkull(Material.POTION, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjliZjg4NWY1MTM3YTliZDhjZTQzYTkxYzVkMGI1ZGU5YjMyNGEzN2YxNGUxNWVlY2IzYmJjZmIxNjJhOWViIn19fQ=="), "§c멜론 주스", "", "§7허기를 " + "3.0" + " §7채워줍니다"), "멜론_주스",
+		new ItemStack[] {getItem("멜론"), null, null, null, null, null, null, null, null},
+		6)
+		.register();
+		
+		new CustomFood(category_drinks, new CustomItem(getSkull(Material.POTION, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTFkYWE5MzNmMTc5Njg4Mjk2YWViMDkwY2E5NDU1OTRlZDU4OTk0N2VhM2M3ZGJjMzJkMTNkNTM5YzkyODBhYSJ9fX0="), "&a멜론 스무디", "", "§7허기를 " + "5.0" + " §7채워줍니다"), "멜론_스무디",
+		new ItemStack[] {getItem("멜론_주스"), getItem("아이스 큐브"), null, null, null, null, null, null, null},
+		10)
+		.register();
+		
+		new CustomJuice(category_drinks, new CustomItem(getSkull(Material.POTION, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjliZjg4NWY1MTM3YTliZDhjZTQzYTkxYzVkMGI1ZGU5YjMyNGEzN2YxNGUxNWVlY2IzYmJjZmIxNjJhOWViIn19fQ=="), "§c호박 주스", "", "§7허기를 " + "3.0" + " §7채워줍니다"), "호박_주스",
+		new ItemStack[] {getItem("호박"), null, null, null, null, null, null, null, null},
+		6)
+		.register();
+		
+		new CustomFood(category_drinks, new CustomItem(getSkull(Material.POTION, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTFkYWE5MzNmMTc5Njg4Mjk2YWViMDkwY2E5NDU1OTRlZDU4OTk0N2VhM2M3ZGJjMzJkMTNkNTM5YzkyODBhYSJ9fX0="), "&a호박 스무디", "", "§7허기를 " + "5.0" + " §7채워줍니다"), "호박_스무디",
+		new ItemStack[] {getItem("호박_주스"), getItem("아이스 큐브"), null, null, null, null, null, null, null},
+		10)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODM3OTRjNzM2ZmM3NmU0NTcwNjgzMDMyNWI5NTk2OTQ2NmQ4NmY4ZDdiMjhmY2U4ZWRiMmM3NWUyYWIyNWMifX19"), "&r포도 머핀", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "포도_머핀",
+		new ItemStack[] {getItem("포도"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, SlimefunItems.HEAVY_CREAM, new ItemStack(Material.EGG), null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODM3OTRjNzM2ZmM3NmU0NTcwNjgzMDMyNWI5NTk2OTQ2NmQ4NmY4ZDdiMjhmY2U4ZWRiMmM3NWUyYWIyNWMifX19"), "&r엘더베리 머핀", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "엘더베리_머핀",
+		new ItemStack[] {getItem("엘더베리"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, SlimefunItems.HEAVY_CREAM, new ItemStack(Material.EGG), null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODM3OTRjNzM2ZmM3NmU0NTcwNjgzMDMyNWI5NTk2OTQ2NmQ4NmY4ZDdiMjhmY2U4ZWRiMmM3NWUyYWIyNWMifX19"), "&r라스베리 머핀", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "라스베리_머핀",
+		new ItemStack[] {getItem("라스베리"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, SlimefunItems.HEAVY_CREAM, new ItemStack(Material.EGG), null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODM3OTRjNzM2ZmM3NmU0NTcwNjgzMDMyNWI5NTk2OTQ2NmQ4NmY4ZDdiMjhmY2U4ZWRiMmM3NWUyYWIyNWMifX19"), "&r크랜베리 머핀", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "크랜베리_머핀",
+		new ItemStack[] {getItem("크랜베리"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, SlimefunItems.HEAVY_CREAM, new ItemStack(Material.EGG), null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODM3OTRjNzM2ZmM3NmU0NTcwNjgzMDMyNWI5NTk2OTQ2NmQ4NmY4ZDdiMjhmY2U4ZWRiMmM3NWUyYWIyNWMifX19"), "&r월귤 머핀", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "월귤_머핀",
+		new ItemStack[] {getItem("월귤"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, SlimefunItems.HEAVY_CREAM, new ItemStack(Material.EGG), null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODM3OTRjNzM2ZmM3NmU0NTcwNjgzMDMyNWI5NTk2OTQ2NmQ4NmY4ZDdiMjhmY2U4ZWRiMmM3NWUyYWIyNWMifX19"), "&r딸기 머핀", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "딸기_머핀",
+		new ItemStack[] {getItem("딸기"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, SlimefunItems.HEAVY_CREAM, new ItemStack(Material.EGG), null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODM3OTRjNzM2ZmM3NmU0NTcwNjgzMDMyNWI5NTk2OTQ2NmQ4NmY4ZDdiMjhmY2U4ZWRiMmM3NWUyYWIyNWMifX19"), "&r토마토 머핀", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "토마토_머핀",
+		new ItemStack[] {getItem("토마토"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, SlimefunItems.HEAVY_CREAM, new ItemStack(Material.EGG), null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODM3OTRjNzM2ZmM3NmU0NTcwNjgzMDMyNWI5NTk2OTQ2NmQ4NmY4ZDdiMjhmY2U4ZWRiMmM3NWUyYWIyNWMifX19"), "&r고구마 머핀", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "고구마_머핀",
+		new ItemStack[] {getItem("고구마"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, SlimefunItems.HEAVY_CREAM, new ItemStack(Material.EGG), null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODM3OTRjNzM2ZmM3NmU0NTcwNjgzMDMyNWI5NTk2OTQ2NmQ4NmY4ZDdiMjhmY2U4ZWRiMmM3NWUyYWIyNWMifX19"), "&r옥수수 머핀", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "옥수수_머핀",
+		new ItemStack[] {getItem("옥수수_가루"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, SlimefunItems.HEAVY_CREAM, new ItemStack(Material.EGG), null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODM3OTRjNzM2ZmM3NmU0NTcwNjgzMDMyNWI5NTk2OTQ2NmQ4NmY4ZDdiMjhmY2U4ZWRiMmM3NWUyYWIyNWMifX19"), "&r파인애플 머핀", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "파인애플_머핀",
+		new ItemStack[] {getItem("파인애플"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, SlimefunItems.HEAVY_CREAM, new ItemStack(Material.EGG), null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODM3OTRjNzM2ZmM3NmU0NTcwNjgzMDMyNWI5NTk2OTQ2NmQ4NmY4ZDdiMjhmY2U4ZWRiMmM3NWUyYWIyNWMifX19"), "&r사과 머핀", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "사과_머핀",
+		new ItemStack[] {getItem("사과"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, SlimefunItems.HEAVY_CREAM, new ItemStack(Material.EGG), null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODM3OTRjNzM2ZmM3NmU0NTcwNjgzMDMyNWI5NTk2OTQ2NmQ4NmY4ZDdiMjhmY2U4ZWRiMmM3NWUyYWIyNWMifX19"), "&r야자 머핀", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "야자_머핀",
+		new ItemStack[] {getItem("야자"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, SlimefunItems.HEAVY_CREAM, new ItemStack(Material.EGG), null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODM3OTRjNzM2ZmM3NmU0NTcwNjgzMDMyNWI5NTk2OTQ2NmQ4NmY4ZDdiMjhmY2U4ZWRiMmM3NWUyYWIyNWMifX19"), "&r체리 머핀", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "체리_머핀",
+		new ItemStack[] {getItem("체리"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, SlimefunItems.HEAVY_CREAM, new ItemStack(Material.EGG), null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODM3OTRjNzM2ZmM3NmU0NTcwNjgzMDMyNWI5NTk2OTQ2NmQ4NmY4ZDdiMjhmY2U4ZWRiMmM3NWUyYWIyNWMifX19"), "&r석류 머핀", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "석류_머핀",
+		new ItemStack[] {getItem("석류"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, SlimefunItems.HEAVY_CREAM, new ItemStack(Material.EGG), null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODM3OTRjNzM2ZmM3NmU0NTcwNjgzMDMyNWI5NTk2OTQ2NmQ4NmY4ZDdiMjhmY2U4ZWRiMmM3NWUyYWIyNWMifX19"), "&r레몬 머핀", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "레몬_머핀",
+		new ItemStack[] {getItem("레몬"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, SlimefunItems.HEAVY_CREAM, new ItemStack(Material.EGG), null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODM3OTRjNzM2ZmM3NmU0NTcwNjgzMDMyNWI5NTk2OTQ2NmQ4NmY4ZDdiMjhmY2U4ZWRiMmM3NWUyYWIyNWMifX19"), "&r자두 머핀", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "자두_머핀",
+		new ItemStack[] {getItem("자두"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, SlimefunItems.HEAVY_CREAM, new ItemStack(Material.EGG), null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODM3OTRjNzM2ZmM3NmU0NTcwNjgzMDMyNWI5NTk2OTQ2NmQ4NmY4ZDdiMjhmY2U4ZWRiMmM3NWUyYWIyNWMifX19"), "&r라임 머핀", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "라임_머핀",
+		new ItemStack[] {getItem("라임"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, SlimefunItems.HEAVY_CREAM, new ItemStack(Material.EGG), null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODM3OTRjNzM2ZmM3NmU0NTcwNjgzMDMyNWI5NTk2OTQ2NmQ4NmY4ZDdiMjhmY2U4ZWRiMmM3NWUyYWIyNWMifX19"), "&r오렌지 머핀", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "오렌지_머핀",
+		new ItemStack[] {getItem("오렌지"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, SlimefunItems.HEAVY_CREAM, new ItemStack(Material.EGG), null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODM3OTRjNzM2ZmM3NmU0NTcwNjgzMDMyNWI5NTk2OTQ2NmQ4NmY4ZDdiMjhmY2U4ZWRiMmM3NWUyYWIyNWMifX19"), "&r복숭아 머핀", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "복숭아_머핀",
+		new ItemStack[] {getItem("복숭아"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, SlimefunItems.HEAVY_CREAM, new ItemStack(Material.EGG), null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODM3OTRjNzM2ZmM3NmU0NTcwNjgzMDMyNWI5NTk2OTQ2NmQ4NmY4ZDdiMjhmY2U4ZWRiMmM3NWUyYWIyNWMifX19"), "&r배 머핀", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "배_머핀",
+		new ItemStack[] {getItem("배"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, SlimefunItems.HEAVY_CREAM, new ItemStack(Material.EGG), null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.PUMPKIN_PIE, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODM3OTRjNzM2ZmM3NmU0NTcwNjgzMDMyNWI5NTk2OTQ2NmQ4NmY4ZDdiMjhmY2U4ZWRiMmM3NWUyYWIyNWMifX19"), "&r멜론 머핀", "", "§7허기를 " + "6.5" + " §7채워줍니다"), "멜론_머핀",
+		new ItemStack[] {getItem("멜론"), new ItemStack(Material.SUGAR), SlimefunItems.WHEAT_FLOUR, SlimefunItems.BUTTER, SlimefunItems.HEAVY_CREAM, new ItemStack(Material.EGG), null, null, null},
+		13)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.SNOW_BALL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTY5MDkxZDI4ODAyMmM3YjBlYjZkM2UzZjQ0YjBmZWE3ZjJjMDY5ZjQ5NzQ5MWExZGNhYjU4N2ViMWQ1NmQ0In19fQ=="), "&r포도 티라미수", "", "§7허기를 " + "9.0" + " §7채워줍니다"), "포도_티라미수",
+		new ItemStack[] {getItem("티라미수"), getItem("포도"), null, null, null, null, null, null, null},
+		18)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.SNOW_BALL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTY5MDkxZDI4ODAyMmM3YjBlYjZkM2UzZjQ0YjBmZWE3ZjJjMDY5ZjQ5NzQ5MWExZGNhYjU4N2ViMWQ1NmQ0In19fQ=="), "&r블루베리 티라미수", "", "§7허기를 " + "9.0" + " §7채워줍니다"), "블루베리_티라미수",
+		new ItemStack[] {getItem("티라미수"), getItem("블루베리"), null, null, null, null, null, null, null},
+		18)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.SNOW_BALL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTY5MDkxZDI4ODAyMmM3YjBlYjZkM2UzZjQ0YjBmZWE3ZjJjMDY5ZjQ5NzQ5MWExZGNhYjU4N2ViMWQ1NmQ0In19fQ=="), "&r엘더베리 티라미수", "", "§7허기를 " + "9.0" + " §7채워줍니다"), "엘더베리_티라미수",
+		new ItemStack[] {getItem("티라미수"), getItem("엘더베리"), null, null, null, null, null, null, null},
+		18)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.SNOW_BALL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTY5MDkxZDI4ODAyMmM3YjBlYjZkM2UzZjQ0YjBmZWE3ZjJjMDY5ZjQ5NzQ5MWExZGNhYjU4N2ViMWQ1NmQ0In19fQ=="), "&r크랜베리 티라미수", "", "§7허기를 " + "9.0" + " §7채워줍니다"), "크랜베리_티라미수",
+		new ItemStack[] {getItem("티라미수"), getItem("크랜베리"), null, null, null, null, null, null, null},
+		18)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.SNOW_BALL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTY5MDkxZDI4ODAyMmM3YjBlYjZkM2UzZjQ0YjBmZWE3ZjJjMDY5ZjQ5NzQ5MWExZGNhYjU4N2ViMWQ1NmQ0In19fQ=="), "&r월귤 티라미수", "", "§7허기를 " + "9.0" + " §7채워줍니다"), "월귤_티라미수",
+		new ItemStack[] {getItem("티라미수"), getItem("월귤"), null, null, null, null, null, null, null},
+		18)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.SNOW_BALL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTY5MDkxZDI4ODAyMmM3YjBlYjZkM2UzZjQ0YjBmZWE3ZjJjMDY5ZjQ5NzQ5MWExZGNhYjU4N2ViMWQ1NmQ0In19fQ=="), "&r토마토 티라미수", "", "§7허기를 " + "9.0" + " §7채워줍니다"), "토마토_티라미수",
+		new ItemStack[] {getItem("티라미수"), getItem("토마토"), null, null, null, null, null, null, null},
+		18)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.SNOW_BALL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTY5MDkxZDI4ODAyMmM3YjBlYjZkM2UzZjQ0YjBmZWE3ZjJjMDY5ZjQ5NzQ5MWExZGNhYjU4N2ViMWQ1NmQ0In19fQ=="), "&r고구마 티라미수", "", "§7허기를 " + "9.0" + " §7채워줍니다"), "고구마_티라미수",
+		new ItemStack[] {getItem("티라미수"), getItem("고구마"), null, null, null, null, null, null, null},
+		18)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.SNOW_BALL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTY5MDkxZDI4ODAyMmM3YjBlYjZkM2UzZjQ0YjBmZWE3ZjJjMDY5ZjQ5NzQ5MWExZGNhYjU4N2ViMWQ1NmQ0In19fQ=="), "&r옥수수 티라미수", "", "§7허기를 " + "9.0" + " §7채워줍니다"), "옥수수_티라미수",
+		new ItemStack[] {getItem("티라미수"), getItem("옥수수_가루"), null, null, null, null, null, null, null},
+		18)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.SNOW_BALL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTY5MDkxZDI4ODAyMmM3YjBlYjZkM2UzZjQ0YjBmZWE3ZjJjMDY5ZjQ5NzQ5MWExZGNhYjU4N2ViMWQ1NmQ0In19fQ=="), "&r파인애플 티라미수", "", "§7허기를 " + "9.0" + " §7채워줍니다"), "파인애플_티라미수",
+		new ItemStack[] {getItem("티라미수"), getItem("파인애플"), null, null, null, null, null, null, null},
+		18)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.SNOW_BALL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTY5MDkxZDI4ODAyMmM3YjBlYjZkM2UzZjQ0YjBmZWE3ZjJjMDY5ZjQ5NzQ5MWExZGNhYjU4N2ViMWQ1NmQ0In19fQ=="), "&r사과 티라미수", "", "§7허기를 " + "9.0" + " §7채워줍니다"), "사과_티라미수",
+		new ItemStack[] {getItem("티라미수"), getItem("사과"), null, null, null, null, null, null, null},
+		18)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.SNOW_BALL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTY5MDkxZDI4ODAyMmM3YjBlYjZkM2UzZjQ0YjBmZWE3ZjJjMDY5ZjQ5NzQ5MWExZGNhYjU4N2ViMWQ1NmQ0In19fQ=="), "&r야자 티라미수", "", "§7허기를 " + "9.0" + " §7채워줍니다"), "야자_티라미수",
+		new ItemStack[] {getItem("티라미수"), getItem("야자"), null, null, null, null, null, null, null},
+		18)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.SNOW_BALL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTY5MDkxZDI4ODAyMmM3YjBlYjZkM2UzZjQ0YjBmZWE3ZjJjMDY5ZjQ5NzQ5MWExZGNhYjU4N2ViMWQ1NmQ0In19fQ=="), "&r체리 티라미수", "", "§7허기를 " + "9.0" + " §7채워줍니다"), "체리_티라미수",
+		new ItemStack[] {getItem("티라미수"), getItem("체리"), null, null, null, null, null, null, null},
+		18)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.SNOW_BALL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTY5MDkxZDI4ODAyMmM3YjBlYjZkM2UzZjQ0YjBmZWE3ZjJjMDY5ZjQ5NzQ5MWExZGNhYjU4N2ViMWQ1NmQ0In19fQ=="), "&r석류 티라미수", "", "§7허기를 " + "9.0" + " §7채워줍니다"), "석류_티라미수",
+		new ItemStack[] {getItem("티라미수"), getItem("석류"), null, null, null, null, null, null, null},
+		18)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.SNOW_BALL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTY5MDkxZDI4ODAyMmM3YjBlYjZkM2UzZjQ0YjBmZWE3ZjJjMDY5ZjQ5NzQ5MWExZGNhYjU4N2ViMWQ1NmQ0In19fQ=="), "&r레몬 티라미수", "", "§7허기를 " + "9.0" + " §7채워줍니다"), "레몬_티라미수",
+		new ItemStack[] {getItem("티라미수"), getItem("레몬"), null, null, null, null, null, null, null},
+		18)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.SNOW_BALL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTY5MDkxZDI4ODAyMmM3YjBlYjZkM2UzZjQ0YjBmZWE3ZjJjMDY5ZjQ5NzQ5MWExZGNhYjU4N2ViMWQ1NmQ0In19fQ=="), "&r자두 티라미수", "", "§7허기를 " + "9.0" + " §7채워줍니다"), "자두_티라미수",
+		new ItemStack[] {getItem("티라미수"), getItem("자두"), null, null, null, null, null, null, null},
+		18)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.SNOW_BALL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTY5MDkxZDI4ODAyMmM3YjBlYjZkM2UzZjQ0YjBmZWE3ZjJjMDY5ZjQ5NzQ5MWExZGNhYjU4N2ViMWQ1NmQ0In19fQ=="), "&r라임 티라미수", "", "§7허기를 " + "9.0" + " §7채워줍니다"), "라임_티라미수",
+		new ItemStack[] {getItem("티라미수"), getItem("라임"), null, null, null, null, null, null, null},
+		18)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.SNOW_BALL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTY5MDkxZDI4ODAyMmM3YjBlYjZkM2UzZjQ0YjBmZWE3ZjJjMDY5ZjQ5NzQ5MWExZGNhYjU4N2ViMWQ1NmQ0In19fQ=="), "&r오렌지 티라미수", "", "§7허기를 " + "9.0" + " §7채워줍니다"), "오렌지_티라미수",
+		new ItemStack[] {getItem("티라미수"), getItem("오렌지"), null, null, null, null, null, null, null},
+		18)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.SNOW_BALL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTY5MDkxZDI4ODAyMmM3YjBlYjZkM2UzZjQ0YjBmZWE3ZjJjMDY5ZjQ5NzQ5MWExZGNhYjU4N2ViMWQ1NmQ0In19fQ=="), "&r복숭아 티라미수", "", "§7허기를 " + "9.0" + " §7채워줍니다"), "복숭아_티라미수",
+		new ItemStack[] {getItem("티라미수"), getItem("복숭아"), null, null, null, null, null, null, null},
+		18)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.SNOW_BALL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTY5MDkxZDI4ODAyMmM3YjBlYjZkM2UzZjQ0YjBmZWE3ZjJjMDY5ZjQ5NzQ5MWExZGNhYjU4N2ViMWQ1NmQ0In19fQ=="), "&r배 티라미수", "", "§7허기를 " + "9.0" + " §7채워줍니다"), "배_티라미수",
+		new ItemStack[] {getItem("티라미수"), getItem("배"), null, null, null, null, null, null, null},
+		18)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.SNOW_BALL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTY5MDkxZDI4ODAyMmM3YjBlYjZkM2UzZjQ0YjBmZWE3ZjJjMDY5ZjQ5NzQ5MWExZGNhYjU4N2ViMWQ1NmQ0In19fQ=="), "&r멜론 티라미수", "", "§7허기를 " + "9.0" + " §7채워줍니다"), "멜론_티라미수",
+		new ItemStack[] {getItem("티라미수"), getItem("멜론"), null, null, null, null, null, null, null},
+		18)
+		.register();
+		
+		new CustomFood(category_food, new CustomItem(getSkull(Material.SNOW_BALL, "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTY5MDkxZDI4ODAyMmM3YjBlYjZkM2UzZjQ0YjBmZWE3ZjJjMDY5ZjQ5NzQ5MWExZGNhYjU4N2ViMWQ1NmQ0In19fQ=="), "&r호박 티라미수", "", "§7허기를 " + "9.0" + " §7채워줍니다"), "호박_티라미수",
+		new ItemStack[] {getItem("티라미수"), getItem("호박"), null, null, null, null, null, null, null},
+		18)
 		.register();
 	}
 
